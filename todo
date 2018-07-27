@@ -1,0 +1,22 @@
+
+
+. PG !
+. Unhandled rejection !
+. Validator !
+. Auth !
+. Router !
+. Upgrade Flow !
+. Logger !
+. Migrations
+. Seed + Faker
+. Better error handling (centralized ErrorHandler)
+. Debugging
+. Tokenbase Auth
+. Metrics
+. Tests
+. Build and Deploy
+. Automatize IoC
+. WS
+. Jobs (Cron)
+. Internationalization
+. Caching

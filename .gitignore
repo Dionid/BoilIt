@@ -1,0 +1,20 @@
+*~
+.DS_Store
+About_NEW.psd
+npm-debug.log
+dest.zip
+public/uploads
+
+# Node modules
+node_modules
+
+# Adonis directory for storing tmp files
+tmp
+
+# Environment variables, never commit this file
+.env
+
+# The development sqlite file
+src/database/development.sqlite
+
+.idea
