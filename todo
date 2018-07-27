@@ -7,7 +7,7 @@
 . Router !
 . Upgrade Flow !
 . Logger !
-. Migrations
+. Migrations !
 . Seed + Faker
 . Better error handling (centralized ErrorHandler)
 . Debugging

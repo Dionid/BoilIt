@@ -1,4 +1,5 @@
 // @flow
+
 import winston from "winston"
 import Config from "../config/index"
 
