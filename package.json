@@ -11,6 +11,7 @@
     "flow:build": "flow-remove-types ./appFlow/ --out-dir ./app/ --all --pretty",
     "babel:build": "babel srcFlow -d src",
     "babel:watch": "rimraf src && babel srcFlow --watch -d src",
+    "knex:make": "cd srcFlow/database && knex migrate:make",
     "knex:migrate": "cd src/database && knex migrate:latest",
     "knex:rollback": "cd src/database && knex migrate:rollback"
   },

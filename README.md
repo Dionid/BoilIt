@@ -1,10 +1,49 @@
 # BoilIt
 
-Описание архитектуры
+## Запуск
 
-## MDSC
+Нужно запустить 2 команды:
 
-Переводится как: **Model.** **DataMapper.** **System.** **Controller.**
+```bash
+npm run babel:watch
+```
+Запустит транспайлинг js в папку `src`
+
+```bash
+npm run start
+```
+Запустит сервер
+
+## Миграции
+
+**Примечание:** миграции можно проиводить и откатывать только, когда скомпилирована папка `src`
+
+Для создания пишем
+
+```
+npm run knex:make __migration_name__
+```
+
+Производим миграции
+
+```
+npm run knex:migrate
+```
+
+Откатываем миграции
+
+```
+npm run knex:rollback
+```
+
+## Архитектура
+
+В этом разделе описано как и почему стандартная реализация `Model`
+заменена на более гибкое `MDS`
+
+## MDS
+
+Переводится как: **Model.** **DataMapper.** **System.**
 
 ## Model
 
@@ -150,8 +189,3 @@ export {
   UsersSystem,
 }
 ```
-
-## Controller
-#### Знает о: Model, Data Mapper, System
-
-Обычный Controller из парадигмы MVC.
