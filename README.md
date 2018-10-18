@@ -1,51 +1,51 @@
 # BoilIt
 
-## Что с этим делать?
+## What to do with it?
 
-1. Склонировать репозиторий `git@github.com:Dionid/BoilIt.git`
-1. Поправить конфигурации в `config` и `database`
-1. Кодить!
+1. Clone the repository `git@github.com: Dionid / BoilIt.git`
+1. Setup configurations in `config` and` database`
+1. Code
 
-## Запуск
+## Launch
 
-Нужно запустить 2 команды:
+You need to run 2 commands:
 
 ```bash
 npm run babel:watch
 ```
-Запустит транспайлинг js в папку `src`
+Run js transpiling in the `src` folder
 
 ```bash
 npm run start
 ```
-Запустит сервер
+Will start the server
 
-## Миграции
+## Migrations
 
-**Примечание:** миграции можно проиводить и откатывать только, когда скомпилирована папка `src`
+** Note: ** migrations can be performed and rolled back only when the `src` folder is compiled
 
-Для создания пишем
+To create run
 
 ```
 npm run knex:make __migration_name__
 ```
 
-Производим миграции
+Make migrations
 
 ```
 npm run knex:migrate
 ```
 
-Откатываем миграции
+Rolling back migrations
 
 ```
 npm run knex:rollback
 ```
 
-## Архитектура
+## Architecture
 
-В этом разделе описано как и почему стандартная реализация `Model`
-заменена на более гибкое `MDS`
+This section describes how and why the standard implementation of `Model`
+replaced by more flexible `MDS`
 
 ## MDS
 
@@ -53,7 +53,7 @@ npm run knex:rollback
 
 ## Model
 
-Сущности, которые используются сервером в процессе работе (не завязанные на БД или подобном). Состоит из описания типа полей и названия полей ваших объектов.
+Entities that are used by the server in the process of work (not tied to a database or the like). It consists of a description of the type of fields and the names of the fields of your objects.
 
 Пример:
 
@@ -87,19 +87,19 @@ export {
 ```
 
 ## Data Mapper
-#### Знает о: Model, System
+#### Knows about: Model, System
 
-Singleton-сервис, отвечающий за получение данных Model из разных внешних источников (любые БД и тому подобное).
+Singleton-service that is responsible for obtaining Model data from various external sources (any databases and the like).
 
-**Особенности**
+** Features **
 
-* Использует `Systems` для видоизменения данных `Model`.
-* Содержит в себе подключения ко всем требующимся внешним хранилищам.
-* Сериализует из `Model` и в `Model`.
-* Бывает 2 видов:
-  * Для конкретной Model
-  * Как сервис для объединения данных разных Models
-
+* Uses `Systems` to modify the` Model` data.
+* Contains connections to all external storage required.
+* Serializes from `Model` and in` Model`.
+* There are 2 types:
+   * For a specific Model
+   * As a service for combining data from different Models
+   
 **Пример**
 
 ```js
@@ -173,9 +173,9 @@ export default UsersDM
 ```
 
 ## System
-#### Знает о: Model, Data Mapper
+#### Knows about: Model, Data Mapper
 
-Stateless singleton-сервис, отвечающий за изменения внутри Model и Model [ ].
+Stateless singleton service responsible for changes inside the Model and Model [].
 
 ```js
 import * as bcrypt from "bcrypt"
