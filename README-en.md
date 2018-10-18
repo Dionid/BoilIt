@@ -1,7 +1,5 @@
 # BoilIt
 
-English readme available [here](README-en.md)
-
 ## What to do with it?
 
 1. Clone the repository `git@github.com: Dionid / BoilIt.git`
@@ -99,8 +97,8 @@ Singleton-service that is responsible for obtaining Model data from various exte
 * Contains connections to all external storage required.
 * Serializes from `Model` and in` Model`.
 * There are 2 types:
-   * For a specific Model
-   * As a service for combining data from different Models
+   * For a specific Model
+   * As a service for combining data from different Models
    
 **Пример**
 
